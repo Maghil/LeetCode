@@ -11,12 +11,12 @@ class Solution:
         while l1 != None or l2 != None:
             digit=0
             if l1!= None:
-                digit+=l1.val
+                digit=l1.val+digit
                 l1=l1.next
             if l2!=None:
-                digit+=l2.val
+                digit=l2.val+digit
                 l2=l2.next
-            digit+=carry
+            digit=carry+digit
             carry=0
             if digit > 9:
                 carry=digit//10
