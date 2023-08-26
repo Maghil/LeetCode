@@ -1,0 +1,1 @@
+have to solve it with better approach 
