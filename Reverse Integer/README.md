@@ -1,0 +1,1 @@
+bit_length() give length of the bit
