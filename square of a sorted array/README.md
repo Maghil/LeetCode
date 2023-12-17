@@ -1,0 +1,1 @@
+Multiplication better than pow in python

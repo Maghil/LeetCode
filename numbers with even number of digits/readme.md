@@ -1,0 +1,1 @@
+log(n,10) + 1 can be used to find number of digits
