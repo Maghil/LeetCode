@@ -1,5 +1,5 @@
 class Solution:
-    def removeElement(self, nums: List[int], val: int) -> int:
+    def removeElement(self, nums, val) -> int:
         i=0
         while i<len(nums):
             if nums[i]==val:
