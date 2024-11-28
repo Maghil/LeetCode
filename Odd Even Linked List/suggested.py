@@ -37,16 +37,16 @@ class Solution(object):
         odd_ptr = odd
         even = Node(0)
         even_ptr = even
-        idx = 1
+        counter = 1
         while head != None:
-            if idx % 2 == 0:
+            if counter % 2 == 0:
                 even_ptr.next = head
                 even_ptr = even_ptr.next
             else:
                 odd_ptr.next = head
                 odd_ptr = odd_ptr.next
             head = head.next
-            idx += 1
+            counter += 1
         even_ptr.next = None
         odd_ptr.next = even.next
         return odd.next
