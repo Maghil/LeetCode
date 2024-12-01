@@ -32,10 +32,10 @@ class LinkedList:
 class Solution:
     def isPalindrome(self, head):
         slow_pointer = fast_pointer = head
-        while fast_pointer and fast_pointer.next and fast_pointer.next.next:
+        while fast_pointer and fast_pointer.next:
             fast_pointer = fast_pointer.next.next
             slow_pointer = slow_pointer.next
-        print(fast_pointer.value)
+            # print(fast_pointer.value)
         print(slow_pointer.value)
 
     def reverseList(self, list):
@@ -43,9 +43,9 @@ class Solution:
         current_node = list.head
         while current_node:
             next_node = current_node.next
-            current_node.next=previous_node
-            previous_node=current_node
-            current_node=next_node
+            current_node.next = previous_node
+            previous_node = current_node
+            current_node = next_node
         return previous_node
 
 
