@@ -44,7 +44,7 @@ class MyLinkedList:
         return current.val
 
     def addAtIndex(self, index, val):
-        if index > self.length - 1 or index < 0:
+        if index > self.length or index < 0:
             return -1
 
         current = self.head
