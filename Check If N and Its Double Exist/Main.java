@@ -2,20 +2,19 @@
 import java.util.HashSet;
 import java.util.Set;
 
-
 public class Main {
 
     public static void main(String[] args) {
-        int[] a = {10, 2, 5, 3};
-        int[] b = {7, 1, 14, 11};
-        int[] c = {3, 1, 7, 11};
-        System.out.println(Solution.checkIfExist(a));
-        System.out.println(Solution.checkIfExist(b));
-        System.out.println(Solution.checkIfExist(c));
+        System.out.println(Solution.checkIfExist(new int[]{10, 2, 5, 3}));
+        System.out.println(Solution.checkIfExist(new int[]{7, 1, 14, 11}));
+        System.out.println(Solution.checkIfExist(new int[]{3, 1, 7, 11}));
+        System.out.println(Solution.checkIfExist(new int[]{0, 0}));
+        System.out.println(Solution.checkIfExist(new int[]{7, 3, 8}));
     }
 }
 
 class Solution {
+
     public static boolean checkIfExist(int[] arr) {
         Set<Integer> set = new HashSet<>();
         for (int i : arr) {
@@ -24,7 +23,6 @@ class Solution {
             }
             set.add(i);
         }
-
         return false;
     }
 }

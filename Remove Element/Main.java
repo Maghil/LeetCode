@@ -2,17 +2,14 @@
 public class Main {
 
     public static void main(String[] args) {
-        int[] a1 = {3, 2, 2, 3};
-        int[] b1 = {0, 1, 2, 2, 3, 0, 4, 2};
-        int[] c1 = {4, 5};
-        int a2 = 3, b2 = 2, c2 = 4;
-        System.out.print(Solution.removeElement(a1, a2));
-        System.out.print(Solution.removeElement(b1, b2));
-        System.out.print(Solution.removeElement(c1, c2));
+        System.out.print(Solution.removeElement(new int[]{3, 2, 2, 3}, 3));
+        System.out.print(Solution.removeElement(new int[]{0, 1, 2, 2, 3, 0, 4, 2}, 2));
+        System.out.print(Solution.removeElement(new int[]{4, 5}, 4));
     }
 }
 
 class Solution {
+
     public static int removeElement(int[] nums, int val) {
         int i = 0, j = nums.length - 1, count = 0;
         while (i <= j) {
@@ -21,8 +18,7 @@ class Solution {
                 i++;
                 j--;
                 count++;
-            }
-            else if (nums[i] != val) {
+            } else if (nums[i] != val) {
                 i++;
                 count++;
             }

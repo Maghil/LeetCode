@@ -1,5 +1,5 @@
 class Solution:
-    def validMountainArray(self, arr: List[int]) -> bool:
+    def validMountainArray(self, arr) -> bool:
         if len(arr) < 3:
             return False
         i = 0
@@ -19,3 +19,13 @@ class Solution:
             return True
         else:
             return False
+        
+if __name__ == "__main__":
+    a = Solution()
+    print(a.validMountainArray([2, 1]))                    # False
+    print(a.validMountainArray([3, 5, 5]))                 # False
+    print(a.validMountainArray([0, 3, 2, 1]))              # True
+    print(a.validMountainArray([1, 2, 3, 4, 5]))           # False
+    print(a.validMountainArray([5, 4, 3, 2, 1]))           # False
+    print(a.validMountainArray([1, 2, 3, 3, 3, 3, 2, 1]))  # False
+    print(a.validMountainArray([1,3,5,7,2,1]))             # True

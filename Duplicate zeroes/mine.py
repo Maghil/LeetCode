@@ -1,22 +1,20 @@
 class Solution:
-    def duplicateZeros(self, arr: List[int]) -> None:
-        queue = collections.deque()
-        i = 0
-        while i < len(arr):
-            if arr[i] != 0:
-                if len(queue) > 0:
-                    if len(queue) <= abs((i+1) - len(arr)):
-                        queue.append(arr[i])
-                    replace_with = queue.popleft()
-                    arr[i] = replace_with
-            else:
-                if len(queue) > 0:
-                    if len(queue) <= abs((i+1) - len(arr)):
-                        queue.append(0)
-                        queue.append(0)
-                    replace_with = queue.popleft()
-                    arr[i] = replace_with
-                else:
-                    queue.append(0)
-            i = i+1
+    def duplicateZeros(self, arr) -> None:
+        zero_count = arr.count(0)
+        for i in range(len(arr) -1, -1,-1):
+            if arr[i] ==0:
+                if i + zero_count < len(arr):
+                    arr[i + zero_count] = 0
+                zero_count -= 1
+            if i + zero_count < len(arr):
+                arr[i + zero_count] = arr[i]
+    
+if __name__ == "__main__":
+    s = Solution()
+    s.duplicateZeros([1,0,2,3,0,4,5,0])
+    s.duplicateZeros([1,2,3])
+    s.duplicateZeros([0])
+    s.duplicateZeros([0,1])
+          
+    
         

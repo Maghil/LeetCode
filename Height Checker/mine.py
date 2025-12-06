@@ -17,5 +17,5 @@ class Solution:
 if __name__ == "__main__":
     a = Solution()
     print(a.heightChecker([1, 1, 4, 2, 1, 3]))
-    # print(a.heightChecker([5,1,2,3,4]))
-    # print(a.heightChecker([1,2,3,4,5]))
+    print(a.heightChecker([5,1,2,3,4]))
+    print(a.heightChecker([1,2,3,4,5]))

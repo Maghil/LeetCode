@@ -1,5 +1,5 @@
 
-class Main {
+public class Main {
 
     public static void main(String[] args) {
         int[] a = {2, 5, 6, 9, 10};

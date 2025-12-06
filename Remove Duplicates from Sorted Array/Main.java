@@ -2,12 +2,12 @@
 public class Main {
 
     public static void main(String[] args) {
-        int[] a1 = {1, 1, 2};
-        int[] b1 = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
-        int[] c1 = {4, 5};
-        System.out.print(Solution.removeDuplicates(a1));
-        System.out.print(Solution.removeDuplicates(b1));
-        System.out.print(Solution.removeDuplicates(c1));
+        System.out.println(Solution.removeDuplicates(new int[]{1, 1, 1, 2, 2, 2}));
+        System.out.println(Solution.removeDuplicates(new int[]{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}));
+        System.out.println(Solution.removeDuplicates(new int[]{-100, 0, 1, 2, 3, 3, 4, 4}));
+        System.out.println(Solution.removeDuplicates(new int[]{1}));
+        System.out.println(Solution.removeDuplicates(new int[]{1, 2}));
+        System.out.println(Solution.removeDuplicates(new int[]{1, 1}));
     }
 }
 

@@ -4,13 +4,9 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        int[] a = {0, 0, 0, 0, 0, 0, 0};
-        int[] b = {0};
-        // int[] c = {1, 3, 5, 7, 9};
-
-        Solution.duplicateZeros(a);
-        Solution.duplicateZeros(b);
-        // System.out.println(Arrays.toString(Solution.duplicateZeros(c)));
+        Solution.duplicateZeros(new int[]{0});
+        Solution.duplicateZeros(new int[]{1, 3, 5, 7, 9});
+        Solution.duplicateZeros(new int[]{1, 0, 2, 3, 0, 4, 5, 0});
     }
 }
 
@@ -18,25 +14,23 @@ class Solution {
 
     public static void duplicateZeros(int[] nums) {
         int zero_count = 0;
-        for (int i : nums) {
-            if (i == 0) {
+        for (int n : nums) {
+            if (n == 0) {
                 zero_count++;
             }
         }
         int n = nums.length;
-        for (int i = n - 1; i >= 0; i--) {
-            if (nums[i] == 0) {
-                if (i + zero_count < n) {
-                    nums[i + zero_count] = 0;
+        for (int j = n - 1; j >= 0; j--) {
+            if (nums[j] == 0) {
+                if (j + zero_count < n) {
+                    nums[j + zero_count] = 0;
                 }
                 zero_count--;
             }
-            if (i + zero_count < n) {
-                nums[i + zero_count] = nums[i];
+            if (j + zero_count < n) {
+                nums[j + zero_count] = nums[j];
             }
         }
-        System.out.print(Arrays.toString(nums));
+        System.out.println(Arrays.toString(nums));
     }
 }
-// 1, 0, 2, 3, 0, 4, 5, 0
-// 1, 0, 0, 2, 3, 0, 0, 4, 5, 0, 0
