@@ -14,6 +14,7 @@ if __name__ == "__main__":
     a = Solution()
     print(a.fib(10))
 
+# 0 1 1 2 3 5 8 13 21 34 55
 # fib(5) = fib(4) + fib(3)
 # fib(4) = fib(3) + fib(2)
 # fib(3) = fib(2) + fib(1)

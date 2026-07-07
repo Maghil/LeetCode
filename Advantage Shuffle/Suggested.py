@@ -1,20 +1,19 @@
 class Solution:
     def advantageCount(self, nums1, nums2):
-        n = len(nums1)
-        indexes = list(range(n))
-        indexes.sort(key=lambda i: nums2[i], reverse=True)
+        length = len(nums1)
+        result = [-1] * length
         nums1.sort(reverse=True)
-        it = 0
-        rit = n-1
-        res = [0]*n
+        indexes = [i for i in range(length)]
+        indexes.sort(key=lambda i: nums2[i],reverse=True)
+        left, right = 0, length -1
         for index in indexes:
-            if nums1[it] > nums2[index]:
-                res[index] = nums1[it]
-                it += 1
+            if nums1[left] > nums2[index]:
+                result[index] = nums1[left]
+                left+=1
             else:
-                res[index] = nums1[rit]
-                rit -= 1
-        return res
+                result[index] = nums1[right]
+                right-=1
+        return result
 
 
 if __name__ == "__main__":

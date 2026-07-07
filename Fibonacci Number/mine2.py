@@ -3,8 +3,8 @@ class Solution:
     def fib(self, n: int) -> int:
         a, b = 0, 1
         for _ in range(2, n+1):
-            temp = a
             a = b
+            temp = a
             b = temp + b
         return b
 

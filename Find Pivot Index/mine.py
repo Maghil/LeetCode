@@ -12,9 +12,9 @@ class Solution:
 
 if __name__ == "__main__":
     a = Solution()
-    print(a.pivotIndex([-10, 10, 10, -10]))
-    print(a.pivotIndex([-10, 10, 1, 10, -10]))
-    print(a.pivotIndex([1]))
-    print(a.pivotIndex([1, 7, 3, 6, 5, 6]))
-    print(a.pivotIndex([1, 2, 3]))
-    print(a.pivotIndex([2, 1, -1]))
+    print(a.pivotIndex([-10, 10, 10, -10]))     # -1
+    print(a.pivotIndex([-10, 10, 1, 10, -10]))  # 2
+    print(a.pivotIndex([1]))                    # 0
+    print(a.pivotIndex([1, 7, 3, 6, 5, 6]))     # 3
+    print(a.pivotIndex([1, 2, 3]))              # -1
+    print(a.pivotIndex([2, 1, -1]))             # 0

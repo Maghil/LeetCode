@@ -11,6 +11,9 @@ class Solution:
                     arr[i + zeroes] = 0
 
 
-if __name__=="__main__":
-    a=Solution()
-    a.duplicateZeros([1,0,2,3,0,4,5,0])
+if __name__ == "__main__":
+    s = Solution()
+    s.duplicateZeros([1,0,2,3,0,4,5,0])
+    s.duplicateZeros([1,2,3])
+    s.duplicateZeros([0])
+    s.duplicateZeros([0,1])

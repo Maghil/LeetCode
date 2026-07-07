@@ -1,24 +1,13 @@
 class Solution:
     def validMountainArray(self, arr) -> bool:
-        if len(arr) < 3:
+        i, length = 0, len(arr)
+        while i < length-1 and arr[i] < arr[i+1]:
+            i += 1
+        if i == 0 or i == length - 1:
             return False
-        i = 0
-        j = len(arr)-1
-        left_fail = False
-        right_fail = False
-        while (not left_fail or not right_fail) and i < j:
-            if arr[i] < arr[i+1]:
-                i = i+1
-            else:
-                left_fail = True
-            if arr[j] < arr[j-1]:
-                j = j-1
-            else:
-                right_fail = True
-        if i == j and i != 0 and j != len(arr)-1:
-            return True
-        else:
-            return False
+        while i < length - 1 and arr[i] > arr[i+1]:
+            i += 1
+        return i == length-1
 
 
 if __name__ == "__main__":
@@ -31,4 +20,3 @@ if __name__ == "__main__":
     print(a.validMountainArray([1, 2, 3, 3, 3, 3, 2, 1]))           # False
     print(a.validMountainArray([1, 3, 5, 7, 2, 1]))                 # True
     print(a.validMountainArray([1, 1, 1, 1, 1, 1, 1, 2, 1]))        # False
-
